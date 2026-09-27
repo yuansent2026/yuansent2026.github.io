@@ -385,38 +385,78 @@
       </div>
 
       <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 text-left">
-        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Your message has been received. An Apex Studio engineer will contact you shortly.');">
+        <form id="inquiry-form" class="space-y-4" onsubmit="handleInquirySubmit(event)">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Your Name</label>
-              <input type="text" placeholder="John Smith" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
+              <input id="inq-name" type="text" placeholder="John Smith" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
             </div>
             <div>
               <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Email Address</label>
-              <input type="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
+              <input id="inq-email" type="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
             </div>
           </div>
 
           <div>
             <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Service Required</label>
-            <select class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
-              <option>New High-Converting Business Website ($499 Starter)</option>
-              <option>Full Multi-Page Contractor Website ($899 Pro)</option>
-              <option>Website Redesign & Performance Modernization</option>
-              <option>Custom Web Application / Platform Development</option>
+            <select id="inq-service" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <option value="New High-Converting Business Website ($499 Starter)">New High-Converting Business Website ($499 Starter)</option>
+              <option value="Full Multi-Page Contractor Website ($899 Pro)">Full Multi-Page Contractor Website ($899 Pro)</option>
+              <option value="Website Redesign & Performance Modernization">Website Redesign & Performance Modernization</option>
+              <option value="Custom Web Application / Platform Development">Custom Web Application / Platform Development</option>
             </select>
           </div>
 
           <div>
             <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Project Details / Goals</label>
-            <textarea rows="4" placeholder="Tell us about your business, current website status, and target completion timeline..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" required></textarea>
+            <textarea id="inq-msg" rows="4" placeholder="Tell us about your business, current website status, and target completion timeline..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" required></textarea>
           </div>
 
-          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl shadow-lg transition text-base flex items-center justify-center gap-2">
+          <button id="inq-btn" type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl shadow-lg transition text-base flex items-center justify-center gap-2">
             <span>Send Project Inquiry</span>
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
           </button>
+
+          <p class="text-[11px] text-center text-slate-500 mt-2">🔒 Guaranteed response within 4 hours. No obligation estimate.</p>
         </form>
+
+        <!-- Dynamic Success Confirmation Modal -->
+        <div id="inquiry-success" class="hidden mt-4 p-6 rounded-2xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-200 space-y-3">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+            <span>Inquiry Received Successfully!</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Thank you, <span id="confirmed-name" class="font-bold text-white"></span>. Your project requirements have been routed to our lead engineering team. We will review your goals and reply to <span id="confirmed-email" class="font-bold text-white"></span> within 4 hours with an itemized proposal.
+          </p>
+          <div class="text-[11px] text-slate-400 pt-2 border-t border-emerald-500/20 flex flex-col sm:flex-row justify-between gap-2">
+            <span>Direct contact: <a href="mailto:yuansent2026@gmail.com" class="text-blue-400 underline">yuansent2026@gmail.com</a></span>
+            <button onclick="document.getElementById('inquiry-form').reset(); document.getElementById('inquiry-success').classList.add('hidden');" class="text-slate-400 hover:text-white underline">
+              Submit another inquiry
+            </button>
+          </div>
+        </div>
+
+        <script>
+          function handleInquirySubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('inq-name').value;
+            const email = document.getElementById('inq-email').value;
+            const service = document.getElementById('inq-service').value;
+            const msg = document.getElementById('inq-msg').value;
+
+            document.getElementById('confirmed-name').innerText = name;
+            document.getElementById('confirmed-email').innerText = email;
+            document.getElementById('inquiry-success').classList.remove('hidden');
+            
+            // Construct mailto link
+            const subject = encodeURIComponent(`Project Inquiry from ${name} - ${service}`);
+            const body = encodeURIComponent(`Client Name: ${name}\nClient Email: ${email}\nRequested Service: ${service}\n\nProject Details:\n${msg}`);
+            
+            // Try mailto dispatch
+            window.location.href = `mailto:yuansent2026@gmail.com?subject=${subject}&body=${body}`;
+          }
+        </script>
 
         <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
           <div class="flex items-center gap-2">
