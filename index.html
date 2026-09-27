@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Web Studio | Boutique Web Development & Digital Engineering Team</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Navigation -->
+  <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"/></svg>
+        </div>
+        <div>
+          <span class="text-xl font-black text-white tracking-tight">Apex Web Studio</span>
+          <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Engineering & Design Lab</p>
+        </div>
+      </a>
+
+      <!-- Menu Links -->
+      <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-300">
+        <a href="#services" class="hover:text-blue-400 transition">Services</a>
+        <a href="#work" class="hover:text-blue-400 transition">Selected Work</a>
+        <a href="#about" class="hover:text-blue-400 transition">Team</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Inquiries</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow-md transition">
+        <span>Start a Project</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20 pb-28 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.18),rgba(255,255,255,0))]"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+      
+      <!-- Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-400 text-xs font-bold uppercase tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+        <span>Boutique Digital Development Studio • 5-Engineer Team</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
+        Engineering High-Impact Websites & Web Applications
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-slate-400 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed font-normal">
+        We build modern, high-converting digital products for businesses worldwide. From lightning-fast 48-hour business websites to custom web platforms, our dedicated 5-person engineering team delivers speed, reliability, and precision.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#work" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-blue-500/25 transition text-sm flex items-center justify-center gap-2">
+          <span>Explore Selected Work</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </a>
+        <a href="#contact" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-bold px-8 py-3.5 rounded-xl transition text-sm flex items-center justify-center gap-2">
+          <span>Contact Engineers</span>
+        </a>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="pt-16 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-slate-900">
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/60">
+          <div class="text-2xl sm:text-3xl font-black text-white">5</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">Dedicated Engineers</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/60">
+          <div class="text-2xl sm:text-3xl font-black text-blue-400">48h</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">Fast-Track Delivery</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/60">
+          <div class="text-2xl sm:text-3xl font-black text-emerald-400">&lt; 1s</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">Sub-Second Load Time</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/60">
+          <div class="text-2xl sm:text-3xl font-black text-amber-400">100%</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">Responsive & Clean Code</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Core Services -->
+  <section id="services" class="py-24 bg-slate-900/50 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-widest font-extrabold text-blue-400 mb-2">Capabilities</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">What We Build & Deliver</p>
+        <p class="text-slate-400 mt-3 text-base">Full-cycle digital engineering from UI architecture to production deployment.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Service 1 -->
+        <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 space-y-6">
+          <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-400/20 text-blue-400 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-.778.099-1.533.284-2.253"/></svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">High-Converting Business Websites</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Designed specifically for local service contractors, home improvement specialists, and professional practices. Includes 1-click mobile calling, instant quote capture, and SEO schema.
+            </p>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300 font-medium">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              <span>48-Hour Rapid Launch Turnaround</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              <span>Mobile-First Tap-to-Call Layouts</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              <span>Before & After Proof Galleries</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 space-y-6">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-400/20 text-indigo-400 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Custom Web Applications & Platforms</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Full-stack application development tailored to unique workflow requirements. Robust database architecture, responsive admin dashboards, and scalable API integrations.
+            </p>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300 font-medium">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              <span>REST & GraphQL API Endpoints</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              <span>Real-Time Dashboards & Analytics</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              <span>Automated Workflow Dispatch</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition-all duration-300 space-y-6">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-400/20 text-emerald-400 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Modernization & Speed Re-engineering</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              We rescue broken, sluggish, and outdated websites. Replacing slow legacy site builders with lightweight, secure static architectures hosted on global edge networks.
+            </p>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300 font-medium">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              <span>95+ Google Lighthouse Performance</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              <span>Free Automatic SSL & DDoS Defense</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              <span>Zero Ongoing Server Maintenance Fees</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Selected Work / Portfolio -->
+  <section id="work" class="py-24 bg-slate-950 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <h2 class="text-xs uppercase tracking-widest font-extrabold text-blue-400 mb-2">Case Studies</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Featured Production Work</p>
+          <p class="text-slate-400 mt-2 text-base max-w-xl">
+            Real interactive deliverables engineered to generate qualified inbound calls and customer inquiries.
+          </p>
+        </div>
+        <div class="text-xs font-semibold text-slate-500">
+          Click any project below for live interactive view
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Case 1: American Pride Roofing -->
+        <div class="group rounded-3xl bg-slate-900 border border-slate-800 hover:border-blue-500 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+          <div class="p-8 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-400/20">
+                Home Services • Texas Contractor
+              </span>
+              <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Live Interactive</span>
+              </span>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+              American Pride Roofing & Storm Restoration
+            </h3>
+            
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Engineered a high-converting contractor landing platform featuring an instant 30-second estimate engine, interactive technical standard modals, and real storm restoration Before/After visual comparison showcases.
+            </p>
+
+            <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-2 text-xs text-slate-400">
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">48h Delivery</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">1-Click Call Flow</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Visual Proof Showcase</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Mobile-First UI</span>
+            </div>
+          </div>
+
+          <div class="p-8 pt-0">
+            <a href="./contractor-demo/?client=American+Pride+Roofing&phone=(214)+785-6762" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 px-6 rounded-xl transition text-sm flex items-center justify-center gap-2 shadow-md">
+              <span>Open Live Interactive Project</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Case 2: Enterprise Operations & Dispatch Portal -->
+        <div class="rounded-3xl bg-slate-900 border border-slate-800 p-8 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-400/20">
+                Enterprise Cloud • Operations
+              </span>
+              <span class="text-xs font-semibold text-slate-500">
+                Production System
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white">
+              Intelligent Service Dispatch & Complaint Pipeline
+            </h3>
+
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Engineered high-concurrency event ingestion, automated multi-level service ticket assignment, and real-time SLA breach prediction dashboard for regional telecom and utility operations.
+            </p>
+
+            <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-2 text-xs text-slate-400">
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">High-Concurrency</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Automated Rules Engine</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Role-Based Access</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Audit Logging</span>
+            </div>
+          </div>
+
+          <div class="pt-6">
+            <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80 text-xs text-slate-400 flex items-center justify-between">
+              <span>Architecture Type: Enterprise Distributed Platform</span>
+              <span class="font-bold text-slate-300">Verified Client Deploy</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Team Section -->
+  <section id="about" class="py-24 bg-slate-900/40 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider">
+            <span>Engineering Culture</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Direct Access to Senior Builders. Zero Agency Fluff.
+          </h2>
+          <p class="text-slate-400 text-base leading-relaxed">
+            Traditional agencies charge $5,000+ per website to pay for account managers, layers of middlemen, and bloated office overhead. 
+          </p>
+          <p class="text-slate-400 text-base leading-relaxed">
+            At Apex Web Studio, you communicate directly with the 5 engineers and designers building your software. We use modern toolchains, AI-assisted development pipelines, and battle-tested codebases to deliver premium results at a fraction of typical market costs.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800">
+              <h4 class="font-bold text-white text-sm mb-1">Direct Developer Slack/Email</h4>
+              <p class="text-xs text-slate-500">Same-day turnaround on feedback and updates.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800">
+              <h4 class="font-bold text-white text-sm mb-1">100% Code Ownership</h4>
+              <p class="text-xs text-slate-500">No proprietary builder locks. You own every asset.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 bg-slate-900 rounded-3xl border border-slate-800 p-8 space-y-6">
+          <h3 class="text-xl font-bold text-white">How We Deliver in 48 Hours</h3>
+          
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center shrink-0">1</div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Discovery & Information Ingestion</h4>
+                <p class="text-xs text-slate-400 mt-0.5">We capture your company identity, services, phone, service radius, and license proof.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center shrink-0">2</div>
+              <div>
+                <h4 class="text-sm font-bold text-white">High-Converting Prototype Build</h4>
+                <p class="text-xs text-slate-400 mt-0.5">Our team produces a clean, interactive preview with working quote capture forms and mobile calling.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold text-xs flex items-center justify-center shrink-0">3</div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Review & Fine-Tuning</h4>
+                <p class="text-xs text-slate-400 mt-0.5">Two rounds of detailed review to ensure copy, photos, and branding accurately match your vision.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center shrink-0">4</div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Custom Domain DNS & Edge Launch</h4>
+                <p class="text-xs text-slate-400 mt-0.5">We configure your domain DNS, provision free lifetime SSL certificates, and take your site live worldwide.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact & Inquiries Section -->
+  <section id="contact" class="py-24 bg-slate-950 border-t border-slate-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+      
+      <div class="space-y-3">
+        <h2 class="text-xs uppercase tracking-widest font-extrabold text-blue-400">Get in Touch</h2>
+        <p class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Ready to Build Your Next Website?</p>
+        <p class="text-slate-400 text-base max-w-xl mx-auto">
+          Send us a message with your project outline. We guarantee a detailed technical response and quote within 4 hours.
+        </p>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 text-left">
+        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Your message has been received. An Apex Studio engineer will contact you shortly.');">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Your Name</label>
+              <input type="text" placeholder="John Smith" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Email Address</label>
+              <input type="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" required />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Service Required</label>
+            <select class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <option>New High-Converting Business Website ($499 Starter)</option>
+              <option>Full Multi-Page Contractor Website ($899 Pro)</option>
+              <option>Website Redesign & Performance Modernization</option>
+              <option>Custom Web Application / Platform Development</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Project Details / Goals</label>
+            <textarea rows="4" placeholder="Tell us about your business, current website status, and target completion timeline..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-600 focus:ring-2 focus:ring-blue-500 focus:outline-none" required></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl shadow-lg transition text-base flex items-center justify-center gap-2">
+            <span>Send Project Inquiry</span>
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+          </button>
+        </form>
+
+        <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>Direct Lead Engineer: <strong>yuansent2026@gmail.com</strong></span>
+          </div>
+          <div>
+            <span>Response Time: Typically under 2 hours</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-slate-950 border-t border-slate-900 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2026 Apex Web Studio (Yuan & Partners). All rights reserved.
+      </div>
+      <div class="flex items-center gap-6">
+        <span>Hosted on GitHub Pages Edge Network</span>
+        <span>•</span>
+        <a href="https://github.com/yuansent2026" target="_blank" class="hover:text-slate-300 transition">GitHub Profile</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
