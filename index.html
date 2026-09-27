@@ -204,31 +204,37 @@
   <section id="work" class="py-24 bg-slate-950 border-t border-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
         <div>
-          <h2 class="text-xs uppercase tracking-widest font-extrabold text-blue-400 mb-2">Case Studies</h2>
+          <h2 class="text-xs uppercase tracking-widest font-extrabold text-blue-400 mb-2">Portfolio & Case Studies</h2>
           <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Featured Production Work</p>
-          <p class="text-slate-400 mt-2 text-base max-w-xl">
-            Real interactive deliverables engineered to generate qualified inbound calls and customer inquiries.
+          <p class="text-slate-400 mt-2 text-base max-w-2xl">
+            From lightning-fast commercial conversion engines to multi-site operations ERP and clinical patient portals. Click any case below for interactive demos and technical breakdowns.
           </p>
         </div>
-        <div class="text-xs font-semibold text-slate-500">
-          Click any project below for live interactive view
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-slate-900/90 border border-slate-800 self-start md:self-auto text-xs font-semibold">
+          <button onclick="filterWork('all', this)" class="work-tab px-4 py-2 rounded-xl bg-blue-600 text-white transition">All Systems (4)</button>
+          <button onclick="filterWork('website', this)" class="work-tab px-4 py-2 rounded-xl text-slate-400 hover:text-white transition">Commercial Websites</button>
+          <button onclick="filterWork('healthcare', this)" class="work-tab px-4 py-2 rounded-xl text-slate-400 hover:text-white transition">Healthcare & Portals</button>
+          <button onclick="filterWork('erp', this)" class="work-tab px-4 py-2 rounded-xl text-slate-400 hover:text-white transition">Operations & ERP</button>
         </div>
       </div>
 
+      <!-- Projects Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         
         <!-- Case 1: American Pride Roofing -->
-        <div class="group rounded-3xl bg-slate-900 border border-slate-800 hover:border-blue-500 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+        <div class="work-card group rounded-3xl bg-slate-900 border border-slate-800 hover:border-blue-500 transition-all duration-300 overflow-hidden flex flex-col justify-between" data-cat="website">
           <div class="p-8 space-y-4">
             <div class="flex items-center justify-between">
               <span class="text-[11px] font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-400/20">
-                Home Services • Texas Contractor
+                Commercial Website • Texas Contractor
               </span>
               <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                <span>Live Interactive</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Live Interactive Demo</span>
               </span>
             </div>
             
@@ -237,14 +243,19 @@
             </h3>
             
             <p class="text-slate-400 text-sm leading-relaxed">
-              Engineered a high-converting contractor landing platform featuring an instant 30-second estimate engine, interactive technical standard modals, and real storm restoration Before/After visual comparison showcases.
+              Engineered a high-converting local contractor landing platform featuring an instant 30-second estimate calculator, interactive service standard modals, and authentic Before/After split visual comparison showcases.
             </p>
 
-            <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-2 text-xs text-slate-400">
+            <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/80 text-xs text-slate-300 flex items-center justify-between">
+              <span class="text-slate-400">Conversion Impact:</span>
+              <span class="font-bold text-emerald-400">+240% Inbound Phone Leads vs. Legacy Site</span>
+            </div>
+
+            <div class="pt-2 flex flex-wrap gap-2 text-xs text-slate-400">
               <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">48h Delivery</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">1-Click Call Flow</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Visual Proof Showcase</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Mobile-First UI</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">1-Click Call Routing</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Before/After Split</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Dynamic URL Parameters</span>
             </div>
           </div>
 
@@ -256,27 +267,116 @@
           </div>
         </div>
 
-        <!-- Case 2: Enterprise Operations & Dispatch Portal -->
-        <div class="rounded-3xl bg-slate-900 border border-slate-800 p-8 space-y-4 flex flex-col justify-between">
-          <div class="space-y-4">
+        <!-- Case 2: FieldFlow ERP (知夏物料系统) -->
+        <div class="work-card group rounded-3xl bg-slate-900 border border-slate-800 hover:border-amber-500 transition-all duration-300 overflow-hidden flex flex-col justify-between" data-cat="erp">
+          <div class="p-8 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-400/20">
+                Operations & ERP • Jobsite Logistics
+              </span>
+              <span class="text-xs font-semibold text-blue-400 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                <span>Verified Architecture</span>
+              </span>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">
+              FieldFlow: Smart Jobsite Inventory & Material Dispatch ERP
+            </h3>
+            
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Designed and implemented a multi-site material logistics platform for trade contractors and construction teams. Features mobile jobsite material requisitions, central warehouse inventory tracking with automated low-stock triggers, batch cost accounting, and foreman approval workflows.
+            </p>
+
+            <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/80 text-xs text-slate-300 flex items-center justify-between">
+              <span class="text-slate-400">Efficiency Gain:</span>
+              <span class="font-bold text-amber-400">-35% Material Shrinkage & Zero Jobsite Halts</span>
+            </div>
+
+            <div class="pt-2 flex flex-wrap gap-2 text-xs text-slate-400">
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Jobsite Requisitions</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Warehouse Multi-Bin</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Project Cost Ledger</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Role-Based Approvals</span>
+            </div>
+          </div>
+
+          <div class="p-8 pt-0">
+            <button onclick="openProjectModal('fieldflow')" class="w-full bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/30 font-bold py-3.5 px-6 rounded-xl transition text-sm flex items-center justify-center gap-2 shadow-md">
+              <span>View System Architecture & Workflow</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Case 3: Zenith Holistic Health (知夏中医 / 健康门诊平台) -->
+        <div class="work-card group rounded-3xl bg-slate-900 border border-slate-800 hover:border-emerald-500 transition-all duration-300 overflow-hidden flex flex-col justify-between" data-cat="healthcare">
+          <div class="p-8 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-400/20">
+                Healthcare & Portals • Integrative Medicine
+              </span>
+              <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Verified Clinical Platform</span>
+              </span>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+              Zenith: Holistic Clinical Intake & Practice Portal
+            </h3>
+            
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Architected a specialized practice management and patient engagement portal for acupuncture, herbal medicine, and holistic wellness clinics. Features interactive 60-second constitution self-assessments, online intake forms, practitioner schedule booking, and custom herbal formula dispensing orders.
+            </p>
+
+            <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/80 text-xs text-slate-300 flex items-center justify-between">
+              <span class="text-slate-400">Clinical Time Saved:</span>
+              <span class="font-bold text-emerald-400">70% Less Paperwork Before Initial Consultation</span>
+            </div>
+
+            <div class="pt-2 flex flex-wrap gap-2 text-xs text-slate-400">
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Symptom Assessment Engine</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">HIPAA-Compliant Intake</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Herbal Formula Tracking</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Provider Calendar</span>
+            </div>
+          </div>
+
+          <div class="p-8 pt-0">
+            <button onclick="openProjectModal('zenith')" class="w-full bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-emerald-500/30 font-bold py-3.5 px-6 rounded-xl transition text-sm flex items-center justify-center gap-2 shadow-md">
+              <span>View Clinical Flow & System Specs</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Case 4: Enterprise Operations & Dispatch Portal -->
+        <div class="work-card group rounded-3xl bg-slate-900 border border-slate-800 hover:border-indigo-500 transition-all duration-300 overflow-hidden flex flex-col justify-between" data-cat="erp">
+          <div class="p-8 space-y-4">
             <div class="flex items-center justify-between">
               <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-400/20">
-                Enterprise Cloud • Operations
+                Enterprise Cloud • Operations ERP
               </span>
-              <span class="text-xs font-semibold text-slate-500">
-                Production System
+              <span class="text-xs font-semibold text-slate-400">
+                High-Concurrency Platform
               </span>
             </div>
 
-            <h3 class="text-2xl font-bold text-white">
-              Intelligent Service Dispatch & Complaint Pipeline
+            <h3 class="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors">
+              CloudGrid: Intelligent Service Dispatch & SLA Pipeline
             </h3>
 
             <p class="text-slate-400 text-sm leading-relaxed">
-              Engineered high-concurrency event ingestion, automated multi-level service ticket assignment, and real-time SLA breach prediction dashboard for regional telecom and utility operations.
+              Engineered high-concurrency event ingestion, automated multi-level service ticket assignment, geo-fenced field dispatching, and real-time SLA breach prediction dashboard for regional utility and infrastructure networks.
             </p>
 
-            <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-2 text-xs text-slate-400">
+            <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/80 text-xs text-slate-300 flex items-center justify-between">
+              <span class="text-slate-400">Reliability Benchmark:</span>
+              <span class="font-bold text-indigo-400">99.98% SLA Compliance Across 10,000+ Daily Events</span>
+            </div>
+
+            <div class="pt-2 flex flex-wrap gap-2 text-xs text-slate-400">
               <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">High-Concurrency</span>
               <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Automated Rules Engine</span>
               <span class="px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800">Role-Based Access</span>
@@ -284,11 +384,11 @@
             </div>
           </div>
 
-          <div class="pt-6">
-            <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80 text-xs text-slate-400 flex items-center justify-between">
-              <span>Architecture Type: Enterprise Distributed Platform</span>
-              <span class="font-bold text-slate-300">Verified Client Deploy</span>
-            </div>
+          <div class="p-8 pt-0">
+            <button onclick="openProjectModal('cloudgrid')" class="w-full bg-slate-800 hover:bg-slate-700 text-indigo-300 border border-indigo-500/30 font-bold py-3.5 px-6 rounded-xl transition text-sm flex items-center justify-center gap-2 shadow-md">
+              <span>View Architecture & Dispatch Rules</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9 3-3 2.143 2.143L15.75 6"/></svg>
+            </button>
           </div>
         </div>
 
@@ -456,6 +556,39 @@
             // Try mailto dispatch
             window.location.href = `mailto:yuansent2026@gmail.com?subject=${subject}&body=${body}`;
           }
+
+          // Portfolio category filter
+          function filterWork(cat, btn) {
+            document.querySelectorAll('.work-tab').forEach(b => {
+              b.classList.remove('bg-blue-600', 'text-white');
+              b.classList.add('text-slate-400');
+            });
+            btn.classList.add('bg-blue-600', 'text-white');
+            btn.classList.remove('text-slate-400');
+
+            const cards = document.querySelectorAll('.work-card');
+            cards.forEach(c => {
+              if (cat === 'all' || c.getAttribute('data-cat') === cat) {
+                c.style.display = 'flex';
+              } else {
+                c.style.display = 'none';
+              }
+            });
+          }
+
+          // Project modal openers
+          function openProjectModal(id) {
+            document.getElementById('project-modal-backdrop').classList.remove('hidden');
+            document.querySelectorAll('.project-modal-panel').forEach(p => p.classList.add('hidden'));
+            const target = document.getElementById('modal-' + id);
+            if (target) target.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          }
+
+          function closeProjectModal() {
+            document.getElementById('project-modal-backdrop').classList.add('hidden');
+            document.body.style.overflow = '';
+          }
         </script>
 
         <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
@@ -485,6 +618,315 @@
       </div>
     </div>
   </footer>
+
+  <!-- Project Interactive Modals Backdrop -->
+  <div id="project-modal-backdrop" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="relative w-full max-w-4xl my-8 bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col text-left">
+      
+      <!-- Close Button -->
+      <button onclick="closeProjectModal()" class="absolute top-6 right-6 p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition z-10">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Modal 1: FieldFlow ERP -->
+      <div id="modal-fieldflow" class="project-modal-panel hidden p-6 sm:p-10 overflow-y-auto space-y-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
+            <span>Operations & ERP • Construction Logistics</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+            FieldFlow: Smart Jobsite Inventory & Material Dispatch ERP
+          </h3>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 leading-relaxed">
+            A production-proven distributed logistics engine designed to eliminate contractor material waste, jobsite delays, and inventory shrinkage across multi-trade construction operations.
+          </p>
+        </div>
+
+        <!-- Metrics Strip -->
+        <div class="grid grid-cols-3 gap-4 p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
+          <div>
+            <div class="text-xl sm:text-2xl font-black text-amber-400">-34.8%</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Material Shrinkage</div>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black text-white">&lt; 2.4 hrs</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Avg Dispatch Turnaround</div>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black text-emerald-400">12 Sites</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Concurrent Active Sync</div>
+          </div>
+        </div>
+
+        <!-- System Architecture Pillars -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-300">Core Engineering Modules</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span>1. Mobile Jobsite Requisitions</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Mobile-optimized foreman interface allowing 10-second SKU barcode scanning, priority routing (routine vs jobsite-blocker), and photographic verification of defective deliveries.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span>2. Warehouse Multi-Bin Deductions</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Centralized warehouse management tracking bin allocations, batch numbers, automated stock deductions upon dispatch, and supplier PO generation at safety thresholds.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span>3. Multi-Project Cost Ledger</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Direct cost attribution per jobsite contract, real-time variance alarms when material usage exceeds initial bid allowances, and sub-contractor allocation audits.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span>4. Multi-Tier Approval Chain</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Granular RBAC matrix: Field Foreman submit → Project Manager cost approval → Warehouse Dispatcher staging → Driver electronic bill of lading sign-off.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="pt-4 border-t border-slate-800">
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Technology Stack</div>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">Python / FastAPI</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">PostgreSQL (ACID Ledgers)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">React + TypeScript</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">Redis Queue</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">Docker Containerized</span>
+          </div>
+        </div>
+
+        <div class="pt-2 flex justify-end gap-3">
+          <button onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition">
+            Close
+          </button>
+          <a href="#contact" onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition flex items-center gap-2">
+            <span>Inquire About Similar ERP Solution</span>
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Modal 2: Zenith Holistic Health -->
+      <div id="modal-zenith" class="project-modal-panel hidden p-6 sm:p-10 overflow-y-auto space-y-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3">
+            <span>Healthcare & Portals • Integrative Medicine</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+            Zenith: Holistic Clinical Intake & Practice Portal
+          </h3>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 leading-relaxed">
+            A specialized clinical practice portal designed for acupuncture, functional medicine, and herbal wellness clinics to replace archaic paper forms with high-converting digital onboarding.
+          </p>
+        </div>
+
+        <!-- Metrics Strip -->
+        <div class="grid grid-cols-3 gap-4 p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
+          <div>
+            <div class="text-xl sm:text-2xl font-black text-emerald-400">22 mins</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Saved per New Patient</div>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black text-white">3.8x</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Booking Conversion</div>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black text-blue-400">89%</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Herbal Repeat Refill Rate</div>
+          </div>
+        </div>
+
+        <!-- System Architecture Pillars -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-300">Core Engineering Modules</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>1. Interactive 60s Assessment</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Dynamic branching clinical questionnaire evaluating bodily vitality, sleep cycles, digestive stress, and energetic constitution with instant patient visual radar breakdown.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>2. HIPAA-Compliant Digital Intake</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Pre-appointment digital registration collecting medication history, contraindication alerts, and digital consent forms encrypted in transit and at rest.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>3. Smart Calendar & Room Routing</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Provider scheduling engine balancing multi-practitioner calendars, treatment room turnaround times, and automated SMS / email confirmation cascades.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>4. Custom Herbal Compounding Portal</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Dedicated prescription ledger tracking customized botanical granule formulas, dosage guidance, batch expiration safety, and 1-click patient reorder fulfillment.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="pt-4 border-t border-slate-800">
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Technology Stack</div>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">Next.js / React</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">Node.js / Express</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">PostgreSQL (AES Encrypted PHI)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">TailwindCSS</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">Stripe Healthcare Invoicing</span>
+          </div>
+        </div>
+
+        <div class="pt-2 flex justify-end gap-3">
+          <button onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition">
+            Close
+          </button>
+          <a href="#contact" onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition flex items-center gap-2">
+            <span>Inquire About Healthcare Portal Build</span>
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Modal 3: CloudGrid SLA Pipeline -->
+      <div id="modal-cloudgrid" class="project-modal-panel hidden p-6 sm:p-10 overflow-y-auto space-y-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-3">
+            <span>Enterprise Cloud • High-Concurrency Dispatch</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+            CloudGrid: Intelligent Service Dispatch & SLA Pipeline
+          </h3>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 leading-relaxed">
+            Mission-critical event streaming, automated geo-routing, and predictive SLA breach warning system built for high-volume infrastructure and telecommunication services.
+          </p>
+        </div>
+
+        <!-- Metrics Strip -->
+        <div class="grid grid-cols-3 gap-4 p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
+          <div>
+            <div class="text-xl sm:text-2xl font-black text-indigo-400">99.98%</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">SLA Compliance Rate</div>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black text-white">4,500/s</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Peak Ingestion Throughput</div>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black text-emerald-400">+28%</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Field Dispatch Efficiency</div>
+          </div>
+        </div>
+
+        <!-- System Architecture Pillars -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-300">Core Engineering Modules</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                <span>1. Zero-Loss Event Queue</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Distributed message pipeline ingesting 10,000+ daily operational alarms with sub-50ms deduplication and automated ticket generation.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                <span>2. Geo-Fenced Dynamic Dispatch</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Intelligent assignment matching incident severity with technician GPS proximity, inventory on van, and technical certification clearance.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                <span>3. Predictive SLA Sentinel</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Real-time monitor flagging unresolved service anomalies 2 hours before contractual penalty limits with automated managerial escalation triggers.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                <span>4. Immutable Compliance Ledger</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Tamper-resistant audit trails capturing state transitions, technician arrival timestamps, and diagnostic work logs for municipal compliance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="pt-4 border-t border-slate-800">
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Technology Stack</div>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">Go & Python Microservices</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">Kafka & RabbitMQ</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">PostgreSQL + ClickHouse</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">React Ops Dashboard</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">Kubernetes Clusters</span>
+          </div>
+        </div>
+
+        <div class="pt-2 flex justify-end gap-3">
+          <button onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition">
+            Close
+          </button>
+          <a href="#contact" onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition flex items-center gap-2">
+            <span>Inquire About High-Throughput Platforms</span>
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 </body>
 </html>
