@@ -26,6 +26,12 @@
     <span>Fast Response Guarantee: Free Roof & Damage Inspection in DFW Metro Area</span>
   </div>
 
+  <!-- Dynamic Referral Attribution Banner (SparkViral Live Integration) -->
+  <div id="referral-banner" class="hidden bg-gradient-to-r from-fuchsia-950 via-purple-900 to-indigo-950 text-white px-4 py-2.5 text-center text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 border-b border-fuchsia-500/40 shadow-inner">
+    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+    <span>Special Referral Incentive: You were invited by <strong id="ref-inviter-name" class="text-amber-300 font-extrabold"></strong>! Exclusive $150 Credit Voucher (<span id="ref-code-val" class="font-mono text-fuchsia-300 font-bold"></span>) has been automatically applied to your quote.</span>
+  </div>
+
   <!-- Header / Navigation -->
   <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -542,6 +548,17 @@
     const client = params.get('client');
     const phone = params.get('phone');
     const city = params.get('city');
+    const ref = params.get('ref');
+    const inviter = params.get('inviter');
+
+    if (inviter || ref) {
+      const banner = document.getElementById('referral-banner');
+      if (banner) {
+        banner.classList.remove('hidden');
+        document.getElementById('ref-inviter-name').innerText = inviter || 'A Valued Neighbor';
+        document.getElementById('ref-code-val').innerText = ref || 'VIP-REWARD';
+      }
+    }
 
     if (client) {
       document.getElementById('brand-name').innerText = client;

@@ -798,8 +798,10 @@
             const name = document.getElementById('sim-inviter').value.trim() || 'Partner';
             const code = 'REF-' + Math.floor(1000 + Math.random() * 9000);
             const encoded = encodeURIComponent(name);
-            const link = `https://apexweb.studio/campaign?ref=${code}&inviter=${encoded}`;
+            const link = `https://yuansent2026.github.io/contractor-demo/?client=American+Pride+Roofing&ref=${code}&inviter=${encoded}`;
             document.getElementById('sim-link-box').innerText = link;
+            const testBtn = document.getElementById('sim-test-link');
+            if (testBtn) testBtn.href = `./contractor-demo/?client=American+Pride+Roofing&ref=${code}&inviter=${encoded}`;
           }
 
           const VIRAL_PRIZES = [
@@ -1148,8 +1150,19 @@
                   Create Link
                 </button>
               </div>
-              <div id="sim-link-box" class="p-2 rounded bg-slate-950 border border-slate-800/80 text-[11px] font-mono text-fuchsia-300 break-all select-all">
-                https://apexweb.studio/campaign?ref=APEX-8842&inviter=David+Miller
+              <div class="space-y-2">
+                <div id="sim-link-box" class="p-2 rounded bg-slate-950 border border-slate-800/80 text-[11px] font-mono text-fuchsia-300 break-all select-all">
+                  https://yuansent2026.github.io/contractor-demo/?client=American+Pride+Roofing&ref=REF-8842&inviter=David+Miller
+                </div>
+                <div class="flex items-center justify-between pt-1">
+                  <span class="text-[10px] text-emerald-400 font-semibold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    <span>Live Endpoint Ready</span>
+                  </span>
+                  <a id="sim-test-link" href="./contractor-demo/?client=American+Pride+Roofing&ref=REF-8842&inviter=David+Miller" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-fuchsia-600 hover:bg-fuchsia-500 text-white text-xs font-bold transition shadow-sm">
+                    <span>Test Live Link (Opens Demo) ↗</span>
+                  </a>
+                </div>
               </div>
             </div>
 
